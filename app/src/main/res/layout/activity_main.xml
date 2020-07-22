@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.kmp.parkjongchul.widget.PenTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탁'하고 치니\n'억'하고 죽었다"
+            android:textSize="60sp"
+            android:textColor="#ffffff"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowRadius="20"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#60; 4일만에 나온 정부의 주장 &#62;"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:shadowColor="#000000"
+            android:shadowRadius="15"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="옆으로 밀어주세요"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:shadowColor="#000000"
+            android:shadowRadius="15"
+            android:alpha="1"
+            android:layout_margin="20dp"/>
+
+        <View
+            android:id="@+id/main_navigation_bar_replace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/main_background_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0"/>
+
+    <View
+        android:id="@+id/main_division_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77000000"
+        android:alpha="0"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/main_left_indicator"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/left"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/main_right_indicator"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/main_status_bar_replace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <ImageButton
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:src="@drawable/menu"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:onClick="menu"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
